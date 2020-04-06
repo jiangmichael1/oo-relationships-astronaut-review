@@ -15,15 +15,11 @@ class Astronaut
     end
 
     def missions
-        Mission.all.select do |missions|
-            missions.astronaut == self
-        end
+        Mission.all.select {|missions| missions.astronaut == self }
     end
 
     def shuttles
-        missions.map do |mission|
-            mission.shuttle
-        end
+        missions.map {|mission|mission.shuttle}.uniq
     end
 
     def all_shuttles
@@ -32,8 +28,24 @@ class Astronaut
         end
     end
 
-    def join_shuttle
+    def join_shuttle(shuttle, launch_date)
+        if shuttle.current_astronauts.count < shuttle.capacity
+            Mission.new(launch_date, self, shuttle)
+        else
+            puts "This shuttle is at capacity!"
+        end
     end
+
+    def self.most_missions
+        Astronaut.all.max_by do |astronaut|
+            # should return a number
+            # look for astronaut that results in the biggest number and return that astronaut
+            puts astronaut.name
+            puts astronaut.missions.count
+            astronaut.missions.count
+        end
+    end
+
 
 end
 

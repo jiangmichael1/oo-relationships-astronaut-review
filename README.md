@@ -62,9 +62,9 @@ Questions you should ask yourself:
   * returns a `String` that is the model number of the shuttle
 - [o] `Shuttle#capacity`
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
-- [ ] `Shuttle#add_astronaut`
+- [o] `Shuttle#add_astronaut`
   * takes in an argument of an `Astronaut` instance and a launch date, and adds them to this shuttle's list of astronauts as long _as it doesn't exceed the shuttle's capacity_.
-- [ ] `Shuttle#current_astronauts`
+- [o] `Shuttle#current_astronauts`
   * returns an `Array` of all the astronauts on this shuttle
 - [o] `Shuttle.all`
   * returns an `Array` of all of NASA's currently running shuttles
@@ -81,11 +81,11 @@ Questions you should ask yourself:
   * returns a `String` that is the astronaut's focus of study on Mars
 - [o] `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
-- [ ] `Astronaut#join_shuttle`
+- [o] `Astronaut#join_shuttle`
   * takes in an argument of a `Shuttle` instance and a launch date, and adds this astronaut to the shuttle's list of astronauts _if it doesn't exceed that shuttle's capacity_. If the shuttle is already full, print the following message: `This shuttle is at capacity!`.
 - [o] `Astronaut.all`
   * returns an `Array` of all the astronauts
-- [ ] `Astronaut.most_missions`
+- [o] `Astronaut.most_missions`
   * returns an instance of an astronaut who has been to Mars the most times
 
 **`MISSION`**

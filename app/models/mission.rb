@@ -5,7 +5,7 @@ class Mission
 
     @@all = []
 
-    def initialize (launch_date)
+    def initialize (launch_date, astronaut, shuttle)
         @launch_date = launch_date
         @shuttle = shuttle
         @astronaut = astronaut
